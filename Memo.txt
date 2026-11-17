@@ -1,5 +1,5 @@
 https://versetrainer.dev/
-
+https://versetrainer.dev/learn
 
 資料など
 https://dev.epicgames.com/documentation/fortnite/learn-the-basics-of-writing-code-in-verse
