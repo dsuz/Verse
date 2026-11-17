@@ -1,17 +1,20 @@
 Main(Args:[]string, Env:[string]string)<suspends>:void =
     # Print(Greet())
     # Greet()
-    a: int = 100;
-    Message : string = "How are you"
+    a: int = 100
+    b := 200    # 定数の場合は型推論もできる/変数の場合は型推論できない
+    Print("{b}")
+    Message := "How are you"
     # Message
     var flg : logic = IsPrime(4)
     Print(if (flg = true) then "y" else "n")
-    set flg = IsPrime(7)
-    Print(if (flg = true) then "y" else "n")
-    set flg = IsPrime(121)
-    Print(if (flg = true) then "y" else "n")
-    set flg = IsPrime(133)
-    Print(if (flg = true) then "y" else "n")
+    # set flg = IsPrime(7)
+    # Print(if (flg = true) then "y" else "n")
+    # set flg = IsPrime(121)
+    # Print(if (flg = true) then "y" else "n")
+    # set flg = IsPrime(133)
+    # Print(if (flg = true) then "y" else "n")
+    # Print(if (flg = true) then "y" else "n")
 
 Fibo(N: int) : int = 
     if (N = 0):
@@ -38,6 +41,6 @@ Greet() : string =
     # Message = "x" # これはできない
     # var Text : string = "Hi"
     # set Text = "Hi, there"  # 変数に値を代入する方法
-    Dummy : string = "Dummy"
+    Dummy := "Dummy"
     Message
-    # 戻り値はどう定義するのか？ 
+    # Q:戻り値はどう定義するのか？ A:最後の式が暗黙的に戻り値になる。関数の途中で戻り値を返して処理を抜けたい場合は明示的に return 文を書く。
