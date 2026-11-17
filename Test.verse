@@ -4,7 +4,14 @@ Main(Args:[]string, Env:[string]string)<suspends>:void =
     a: int = 100;
     Message : string = "How are you"
     # Message
-    Print(if (IsPrime(11) = true) then "y" else "n")
+    var flg : logic = IsPrime(4)
+    Print(if (flg = true) then "y" else "n")
+    set flg = IsPrime(7)
+    Print(if (flg = true) then "y" else "n")
+    set flg = IsPrime(121)
+    Print(if (flg = true) then "y" else "n")
+    set flg = IsPrime(133)
+    Print(if (flg = true) then "y" else "n")
 
 Fibo(N: int) : int = 
     if (N = 0):
@@ -20,10 +27,10 @@ IsPrime(N : int) : logic =
     else if (N = 2):
         return true
     else:
-        for (i : int = 3; i < N; i = i + 1):
+        for (i := 2..N - 1):
             if (Mod[N, i] = 0):
                 return false
-    true
+        true
 
 # メソッドを定義する
 Greet() : string =
