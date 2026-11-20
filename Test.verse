@@ -1,4 +1,13 @@
 Main(Args:[]string, Env:[string]string)<suspends>:void =
+    var Values: []int = array{ 0, 1, 100, 250 }
+    if (Fourth := Values[3], Fourth > 10):
+        Print("4番目は {Fourth}")
+    else:
+        Print("配列の要素が3以下、または4番目が10以下")
+
+
+
+
     # Print(Greet())
     # Greet()
     a: int = 100
