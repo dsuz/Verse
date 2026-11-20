@@ -1,8 +1,14 @@
-https://versetrainer.dev/
-https://versetrainer.dev/learn
+- VerseTrainerhttps://versetrainer.dev/
+    - Learn https://versetrainer.dev/learn
 
-資料など
+- The Verse Programming Language https://verselang.github.io/book/
+    - Failure https://verselang.github.io/book/08_failure/
+    - Effects https://verselang.github.io/book/13_effects/
+    - Control Flow https://verselang.github.io/book/07_control/
+
+- Verse Code Style Guide https://dev.epicgames.com/documentation/fortnite/verse-code-style-guide-in-unreal-editor-for-fortnite
+
+
 https://dev.epicgames.com/documentation/fortnite/learn-the-basics-of-writing-code-in-verse
 https://dev.epicgames.com/documentation/fortnite/verse-language-get-started-in-unreal-editor-for-fortnite
 https://dev.epicgames.com/documentation/fortnite/verse-glossary
-https://verselang.github.io/book/
