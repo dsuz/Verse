@@ -5,18 +5,12 @@ Main(Args:[]string, Env:[string]string)<suspends>:void =
     b := 200    # 定数の場合は型推論もできる/変数の場合は型推論できない
     Print("{b}")
     Message := "How are you"
-    # Message
-    # var flg : logic = IsPrime(4)
-    # Print(if (flg = true) then "y" else "n")
-    for (n := 2..20):
+    for (n := 2..7):
         Print(if (IsPrime[n]) then "{n} is Prime" else "{n} is Composite")
-    # set flg = IsPrime(7)
-    # Print(if (flg = true) then "y" else "n")
-    # set flg = IsPrime(121)
-    # Print(if (flg = true) then "y" else "n")
-    # set flg = IsPrime(133)
-    # Print(if (flg = true) then "y" else "n")
-    # Print(if (flg = true) then "y" else "n")
+    Squares := for(I := 1..5) { I * I }
+    for (I -> N : Squares):
+        Print("{I} : {N}");
+    Print("End")
 
 Fibo(N: int) : int = 
     if (N = 0):
