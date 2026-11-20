@@ -6,8 +6,10 @@ Main(Args:[]string, Env:[string]string)<suspends>:void =
     Print("{b}")
     Message := "How are you"
     # Message
-    var flg : logic = IsPrime(4)
-    Print(if (flg = true) then "y" else "n")
+    # var flg : logic = IsPrime(4)
+    # Print(if (flg = true) then "y" else "n")
+    for (n := 2..20):
+        Print(if (IsPrime[n]) then "{n} is Prime" else "{n} is Composite")
     # set flg = IsPrime(7)
     # Print(if (flg = true) then "y" else "n")
     # set flg = IsPrime(121)
@@ -24,16 +26,15 @@ Fibo(N: int) : int =
     
     Fibo(N - 1) + Fibo(N - 2)
 
-IsPrime(N : int) : logic = 
+IsPrime(N : int)<computes><decides> : void = 
     if (N < 1):
-        return false
+        false?
     else if (N = 2):
-        return true
+        
     else:
         for (i := 2..N - 1):
             if (Mod[N, i] = 0):
-                return false
-        true
+                false?
 
 # メソッドを定義する
 Greet() : string =
