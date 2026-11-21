@@ -1,4 +1,4 @@
-- VerseTrainerhttps://versetrainer.dev/
+- VerseTrainer https://versetrainer.dev/
     - Learn https://versetrainer.dev/learn
 
 - The Verse Programming Language https://verselang.github.io/book/
