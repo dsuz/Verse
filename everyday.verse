@@ -1,15 +1,13 @@
-Main(Args:[]string, Env:[string]string)<suspends>:void =
-    var Coins:int = 100
-    var PotionStock:int = 2
-    PotionPrice := 50
+IsPositive(Value:int)<decides><transacts>:void = 
+    Value > 0
 
-    loop:
-        Print("Potionを買います")
-        if:
-            set Coins -= PotionPrice
-            set PotionStock += 1
-            Coins >= 0
-        else:
-            Print("買えませんでした")
-            break
-        Print("Coins: {Coins}, PotionStock: {PotionStock}")
+CalculateDamage(AttackPower:int, Defense:int)<transacts>:int =
+    AttackPower - Defense
+
+Main(Args:[]string, Env:[string]string)<suspends>:void =
+    AttackDefenseValueList := array{(80, 30), (4, 4), (3, 5)}
+
+    for (AttackDefence : AttackDefenseValueList):
+        var Damage:int = CalculateDamage(AttackDefence)
+        if(not IsPositive[Damage]) { set Damage = 0 }
+        Print("ダメージは {Damage}")
