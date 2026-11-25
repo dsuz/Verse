@@ -1,0 +1,11 @@
+{
+  "Verse Main": {
+    "scope": "verse",
+    "prefix": "main",
+    "body": [
+      "Main(Args:[]string, Env:[string]string)<suspends>:void =",
+      "\t$0"
+    ],
+    "description": "Verse Main function"
+  }
+}
